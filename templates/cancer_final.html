@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lung Health Detection</title>
+    <style>
+    <!--	.form-container {	
+              margin: 0 auto;
+              width: 50%;
+       } -->
+        body {background-image: url('https://wallpaperaccess.com/full/2657595.jpg');
+  		  background-repeat: no-repeat;
+  		  background-attachment: fixed;
+              background-psition:center;
+		  background-size:cover;
+             }
+	.head-top{
+              width: 100%;
+              height:10%;
+              background-color: #c0c0c0;
+            }
+	
+	.btm-right{
+            float: left;
+            width: 80%;
+        }
+            
+	    td{
+              color: aliceblue;
+		  padding:9px
+		  
+            }
+		
+    </style>
+</head>
+
+<body>
+
+	
+  <form method="POST" action="{{ url_for('process_data') }}">
+
+<div class="head-top">
+           <marquee><h1>Welcome to Lung Health Prediction</h1>
+                </marquee>
+            </div>
+        
+   
+ 
+<h2 style="color:white";> &emsp;&emsp;&emsp;&emsp;Fill up the  Details </h2>
+
+<table class="center1">
+    <tr>
+        <td>Age:</td>
+        <td><input type="number" name="Age" placeholder="1" min=1 max=120 required="required" /></td>
+        <td>Gender:</td>
+        <td><input type="number" name="Gender" placeholder="1" min=0 max=1 required="required" /><br><br></td>
+    </tr>
+    
+    <tr>
+        <td> Air Pollution :</td>
+        <td><input  type="number" name="Air_Pollution" placeholder="1" min=1 max=10 required="required" /></td>
+	  <td> Alcohol use :</td>
+        <td><input  type="number" name="Alcohol_use" placeholder="1"  min=1 max=10 required="required" /></br><br></td>
+
+    </tr>
+
+    <tr>
+        <td> Dust Allergy :</td>
+        <td><input  type="number" name="Dust_Allergy" placeholder="1"  min=1 max=10 required="required" /></td>
+	  <td> OccuPational Hazards:</td>
+        <td><input  type="number" name="OccuPational_Hazards" placeholder="1"  min=1 max=10 required="required" /></br><br></td>
+
+    </tr>
+
+    <tr>
+        <td> Genetic Risk :</td>
+        <td><input  type="number" name="Genetic_Risk" placeholder="1"  min=1 max=10 required="required" /></td>
+	  <td> Chronic Lung Disease:</td>
+        <td><input  type="number" name="chronic_Lung_Disease" placeholder="1"  min=1 max=10 required="required" /></br><br></td>
+
+    </tr>
+     
+    <tr>
+        <td> Obesity :</td>
+        <td><input  type="number" name="Obesity" placeholder="1"  min=1 max=10 required="required" /></td>
+	  <td> Smoking :</td>
+        <td><input  type="number" name="Smoking" placeholder="1"  min=1 max=10 required="required" /></br><br></td>
+
+    </tr>
+
+     <tr>
+        <td> Passive Smoker :</td>
+        <td><input  type="number" name="Passive_Smoker" placeholder="1"  min=1 max=10 required="required" /></td>
+	  <td> Chest Pain :</td>
+        <td><input  type="number" name="Chest_Pain" placeholder="1"  min=1 max=10 required="required" /></br><br></td>
+
+    </tr>
+
+      <tr>
+        <td>Coughing of Blood :</td>
+        <td><input  type="number" name="Coughing_of_Blood" placeholder="1"  min=1 max=10 required="required" /></td>
+	  <td> Fatigue :</td>
+        <td><input  type="number" name="Fatigue" placeholder="1"  min=1 max=10 required="required" /></br><br></td>
+
+    </tr>
+
+       <tr>
+        <td>Weight Loss :</td>
+        <td><input  type="number" name="Weight_Loss" placeholder="1"  min=1 max=10 required="required" /></td>
+	  <td> Shortness of Breath :</td>
+        <td><input  type="number" name="Shortness_of_Breath" placeholder="1"  min=1 max=10 required="required" /></br><br></td>
+
+    </tr>
+
+    <tr>
+        <td>Wheezing :</td>
+        <td><input  type="number" name="Wheezing" placeholder="1"  min=1 max=10 required="required" /></td>
+	  <td> Swallowing Difficulty :</td>
+        <td><input  type="number" name="Swallowing_Difficulty" placeholder="1"  min=1 max=10 required="required" /></br><br></td>
+
+    </tr>
+
+    <tr>
+        <td>Clubbing of Finger Nails :</td>
+        <td><input  type="number" name="Clubbing_of_Finger_Nails" placeholder="1"  min=1 max=10 required="required" /></td>
+	  <td> Frequent Cold :</td>
+        <td><input  type="number" name="Frequent_Cold" placeholder="1"  min=1 max=10 required="required" /></br><br></td>
+
+    </tr>
+
+      <tr>
+        <td>Dry Cough:</td>
+        <td><input  type="number" name="Dry_Cough" placeholder="1"  min=1 max=10 required="required" /></td>
+	  <td> Snoring:</td>
+        <td><input  type="number" name="Snoring" placeholder="1"  min=1 max=10 required="required" /></br><br></td>
+
+    </tr>
+
+    <tr>
+        <td>Balanced Diet:</td>
+        <td><input  type="number" name="Balanced_Diet" placeholder="1"  min=1 max=10 required="required" /></td>
+
+    </tr>
+ 
+  </table>
+<br>
+&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<button type="submit" class="button button1" >Predict</button>
+
+ </body>
+</html>
